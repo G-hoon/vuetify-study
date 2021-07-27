@@ -1,6 +1,6 @@
 <template>
   <div>
-      dash
+    dash
   </div>
 </template>
 

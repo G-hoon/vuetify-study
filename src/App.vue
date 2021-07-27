@@ -6,12 +6,14 @@
       dark
     >
       <div class="d-flex align-center">
-        <v-img alt="Vuetify Logo"
-               class="shrink mr-2"
-               contain
-               src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-               transition="scale-transition"
-               width="40"/>
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
 
         <v-img
           alt="Vuetify Name"
@@ -23,7 +25,7 @@
         />
       </div>
 
-      <v-spacer></v-spacer>
+      <v-spacer />
 
       <v-btn
         href="https://github.com/vuetifyjs/vuetify/releases/latest"
@@ -35,8 +37,7 @@
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer app>
-      <v-list-item
-      >
+      <v-list-item>
         <v-list-item-content>
           <v-list-item-title class="text-h6">
             Application
@@ -47,7 +48,7 @@
         </v-list-item-content>
       </v-list-item>
 
-      <v-divider></v-divider>
+      <v-divider />
 
       <v-list
         dense
@@ -72,8 +73,12 @@
 
     <v-main>
       <div>
-        <router-link to="/">Dashboard</router-link>
-        <router-link to="/grid-system">GridSystem</router-link>
+        <router-link to="/">
+          Dashboard
+        </router-link>
+        <router-link to="/grid-system">
+          GridSystem
+        </router-link>
       </div>
       <router-view />
     </v-main>

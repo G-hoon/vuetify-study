@@ -1,6 +1,6 @@
 <template>
   <div>
-      grid
+    grid
   </div>
 </template>
 
