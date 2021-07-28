@@ -28,7 +28,7 @@
       <v-spacer />
 
       <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
+        href="https://github.com/G-hoon/vuetify-study"
         target="_blank"
         text
       >
@@ -80,7 +80,14 @@
           GridSystem
         </router-link>
       </div>
-      <router-view />
+
+      <v-container
+        fluid
+      >
+        <!-- class="red" 배경색을 칠할 수 있음 -->
+        <!-- fluid: 너비를 끝까지 채울때 쓰는 속성-->
+        <router-view />
+      </v-container>
     </v-main>
   </v-app>
 </template>
