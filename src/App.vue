@@ -100,7 +100,8 @@ export default {
     return {
       items: [
         { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
-        { title: 'Grid System', icon: 'mdi-view-dashboard', to: '/grid-system' }
+        { title: 'Grid System', icon: 'mdi-view-dashboard', to: '/grid-system' },
+        { title: 'Grid List Page', icon: 'mdi-view-dashboard', to: '/grid-list-page' }
       ],
     }
   }
