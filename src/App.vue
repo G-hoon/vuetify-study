@@ -1,30 +1,110 @@
 <template>
   <v-app>
-    <!-- v-app는 반드시 최상단에 있어야 함 -->
     <v-app-bar
-      v-if="$vuetify.breakpoint.xsOnly"
       app
-    />
-    <!-- app속성을 사용 - v-app의 기본적인 layount component(v-app-bar, v-navigation-drawer...) 사용 위해 -->
-    <!-- v-if="$vuetify.breakpoint.xsOnly" : 모바일 사이즈 일때만 bar를 표시하겠다 -->
-    <v-navigation-drawer app />
+      color="primary"
+      dark
+    >
+      <div class="d-flex align-center">
+        <v-img
+          alt="Vuetify Logo"
+          class="shrink mr-2"
+          contain
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
+          transition="scale-transition"
+          width="40"
+        />
+
+        <v-img
+          alt="Vuetify Name"
+          class="shrink mt-1 hidden-sm-and-down"
+          contain
+          min-width="100"
+          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
+          width="100"
+        />
+      </div>
+
+      <v-spacer />
+
+      <v-btn
+        href="https://github.com/G-hoon/vuetify-study"
+        target="_blank"
+        text
+      >
+        <span class="mr-2">Latest Release</span>
+        <v-icon>mdi-open-in-new</v-icon>
+      </v-btn>
+    </v-app-bar>
+    <v-navigation-drawer app>
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Application
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            subtext
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+
+      <v-divider />
+
+      <v-list
+        dense
+        nav
+      >
+        <v-list-item
+          v-for="item in items"
+          :key="item.title"
+          link
+          :to="item.to"
+        >
+          <v-list-item-icon>
+            <v-icon>{{ item.icon }}</v-icon>
+          </v-list-item-icon>
+
+          <v-list-item-content>
+            <v-list-item-title>{{ item.title }}</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+    </v-navigation-drawer>
+
     <v-main>
-      <!-- 컨텐츠 영역을 나타냄 / Vue에서 v-app 을 마운트 할 때, v-app-bar, naviagaton 등의 layout component 사이즈(높이)를 세팅한 다음에 -->
-      <!-- 나머지 영역을 v-main(컨텐츠 영역)으로 할당 시킨다 -->
-      <v-container fluid>
-        컨텐츠 영역
+      <div>
+        <router-link to="/">
+          Dashboard
+        </router-link>
+        <router-link to="/grid-system">
+          GridSystem
+        </router-link>
+      </div>
+
+      <v-container
+        fluid
+      >
+        <!-- class="red" 배경색을 칠할 수 있음 -->
+        <!-- fluid: 너비를 끝까지 채울때 쓰는 속성-->
+        <router-view />
       </v-container>
     </v-main>
-    <v-footer app />
   </v-app>
 </template>
 
 <script>
+
 export default {
-
-}
+  name: 'App',
+  data() {
+    return {
+      items: [
+        { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
+        { title: 'Grid System', icon: 'mdi-view-dashboard', to: '/grid-system' },
+        { title: 'Break Points', icon: 'mdi-view-dashboard', to: '/breakpoints' },
+        { title: 'Grid List Page', icon: 'mdi-view-dashboard', to: '/grid-list-page' }
+      ],
+    }
+  }
+};
 </script>
-
-<style>
-
-</style>
