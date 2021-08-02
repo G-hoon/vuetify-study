@@ -30,7 +30,9 @@
           <v-dialog
             v-model="dialog"
             width="500"
+            :fullscreen="$vuetify.breakpoint.mobile"
           >
+            <!-- mobile일때만, 풀 스크린 / 그냥 데스크탑일때는 일반 창 -->
             <template v-slot:activator="{ on, attrs }">
               <v-btn
                 color="red lighten-2"
@@ -65,6 +67,26 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
+        </v-card>
+      </v-container>
+    </v-card>
+    <v-card class="mt-5">
+      <v-card-title>
+        Vuetify Breakpoint Object
+      </v-card-title>
+      <v-container class="mt-5">
+        <v-card
+          class="pa-3"
+          outlined
+        >
+          $vuetify.breakpoint.xs: {{ $vuetify.breakpoint.xs }}<br>
+          $vuetify.breakpoint.smAndDown: {{ $vuetify.breakpoint.smAndDown }}<br>
+          <!-- sm 이하일때만 true / sm 벗어나서 md이상일때는 false -->
+          $vuetify.breakpoint.height: {{ $vuetify.breakpoint.height }}<br>
+          $vuetify.breakpoint.width: {{ $vuetify.breakpoint.width }}<br>
+          <!-- 브라우저에서 보이는 현재 width 와 height -->
+          $vuetify.breakpoint.Thresholds: {{ $vuetify.breakpoint.thresholds }}<br>
+          <!-- 현재 설정된 breakpoint의 property의 값. 오버라이딩 가능 -->
         </v-card>
       </v-container>
     </v-card>
