@@ -1,10 +1,13 @@
 <template>
-  <router-view />
+  <div>ss</div>
 </template>
 
 <script>
-
 export default {
-  name: 'App',
-};
+
+}
 </script>
+
+<style>
+
+</style>
