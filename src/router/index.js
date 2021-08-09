@@ -86,7 +86,7 @@ const routes = [
     component: PageLayout,
     children: [
       {
-        path: 'product-list',
+        path: '/product-list',
         name: 'ProductList',
         component: ProductList
       }
