@@ -1,0 +1,12 @@
+/* variables.scss or variable.sass 를 만들어 놓으면 자동으로 vuetify-loader가 이걸 읽어서 스타일을 적용함 */
+/* 처음 적용할 땐, 서버 껏다가 켜야함 */
+/* 원하는 component에 적용하기 위한 style code 확인: https://vuetifyjs.com/en/features/sass-variables/#variable-api */
+/* font-size 변경할 때는, rem or em으로 할 것. 그래야 root에서 정한 크기에 비례하여 가변적으로 모든 rem, em 값이 변함 */
+$font-size-root: 16px;
+$btn-sizes: (
+    'x-small': 15,
+    'small': 23, 
+    'default': 31,
+    'large': 39,
+    'x-large': 47
+)
