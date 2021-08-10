@@ -8,7 +8,13 @@
       </v-list-item-content>
     </template>
     <template v-for="(child, index) in item.items">
+      <default-list-group
+        v-if="child.items"
+        :key="`sub-group-${index}`"
+        :item="child"
+      />
       <default-list-item
+        v-else
         :key="`child-${index}`"
         :item="child"
       />
@@ -17,11 +23,13 @@
 </template>
 
 <script>
-import DefaultListItem from './ListItem.vue'
+import DefaultListGroup from './ListGroup'
+import DefaultListItem from './ListItem'
 export default {
   name: 'DefaultListGroup',
   components: {
-    DefaultListItem
+    DefaultListItem,
+    DefaultListGroup
   },
   props: {
     item: {

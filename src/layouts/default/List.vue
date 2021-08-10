@@ -1,6 +1,7 @@
 <template>
   <v-list
     dense
+    expand
     nav
   >
     <template v-for="(item, index) in items">

@@ -33,8 +33,10 @@ export default {
     items: [
       { title: 'Dashboard', icon: 'mdi-view-dashboard', to: '/' },
       { title: 'Pages', icon: 'mdi-menu', items: [
-        { title: 'Sign-In', icon: 'mdi-view-dashboard', to: '/sign-in' },
-        { title: 'Sign-Up', icon: 'mdi-view-dashboard', to: '/sign-up' },
+        { title: 'Authentication', icon: 'mdi-login', items: [
+          { title: 'Sign-In', icon: 'mdi-view-dashboard', to: '/sign-in' },
+          { title: 'Sign-Up', icon: 'mdi-view-dashboard', to: '/sign-up' },
+        ] },
         { title: 'Product List', icon: 'mdi-view-dashboard', to: '/product-list' }
       ] },
       { title: 'Grid System', icon: 'mdi-view-dashboard', to: '/grid-system' },
